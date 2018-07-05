@@ -1,9 +1,4 @@
-public class TresOro extends CartaBO implements Carta {
-    @Override
-    public Carta truco(Carta primerCarta, Carta segundaCarta) {
-        return null;
-    }
-
+public class TresOro implements Carta {
     @Override
     public Carta truco(Carta carta) {
         return null;

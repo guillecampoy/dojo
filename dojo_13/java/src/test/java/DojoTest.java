@@ -17,7 +17,7 @@ public class DojoTest {
         AnchoEspada anchoEspada = new AnchoEspada();
         SieteEspada sieteEspada = new SieteEspada();
 
-        Assert.assertEquals (anchoEspada, anchoEspada.truco(anchoEspada,sieteEspada) );
+        Assert.assertEquals (anchoEspada, anchoEspada.truco(sieteEspada) );
 	}
 
 	@Test
@@ -41,7 +41,7 @@ public class DojoTest {
         AnchoEspada anchoEspada = new AnchoEspada();
         SieteEspada sieteEspada = new SieteEspada();
 
-        Assert.assertEquals (anchoEspada, anchoEspada.truco(sieteEspada,anchoEspada) );
+        Assert.assertEquals (anchoEspada, anchoEspada.truco(sieteEspada) );
     }
 
     @Test
@@ -60,8 +60,24 @@ public class DojoTest {
         Assert.assertEquals (anchoEspada, anchoBasto.truco(anchoEspada) );
     }
 
+    @Test
+    public void test_siete_espada_pierde_ancho_de_basto(){
+        AnchoBasto anchoBasto = new AnchoBasto();
+        SieteEspada sietedeEspadas = new SieteEspada();
+
+        Assert.assertEquals (anchoBasto, sietedeEspadas.truco(anchoBasto) );
+    }
+
+    @Test
+    public void test_siete_espada_pierde_ancho_de_espada(){
+        AnchoEspada anEspada = new AnchoEspada();
+        SieteEspada sietedeEspadas = new SieteEspada();
+
+        Assert.assertEquals (anEspada, sietedeEspadas.truco(anEspada) );
+    }
+/**
 	@Test
-    public void test_envido_triada_jugador_uno_veintiocho_pierde_contra_triada_jugador_dos_treintaidos(){
+   // public void test_envido_triada_jugador_uno_veintiocho_pierde_contra_triada_jugador_dos_treintaidos(){
 	    Mano manoJugadorUno = new Mano(new AnchoEspada(),new TresOro(), new CincoOro());
 	    Mano manoJugadorDos = new Mano(new AnchoBasto(), new SieteEspada(), new CincoEspadas());
 
@@ -72,6 +88,6 @@ public class DojoTest {
 
 
     }
-
+**/
 
 }

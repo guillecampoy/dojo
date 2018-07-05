@@ -1,11 +1,6 @@
-public class CincoEspadas extends CartaBO implements Carta{
-    @Override
-    public Carta truco(Carta primerCarta, Carta segundaCarta) {
-        return null;
-    }
-
+public class CincoEspadas implements Carta{
     @Override
     public Carta truco(Carta carta) {
-        return null;
+        return this;
     }
 }

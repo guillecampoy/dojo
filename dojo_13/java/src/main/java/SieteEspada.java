@@ -1,12 +1,14 @@
-public class SieteEspada extends CartaBO implements Carta{
-
-    @Override
-    public Carta truco(Carta primerCarta, Carta segundaCarta) {
-        return null;
-    }
-
+public class SieteEspada implements Carta{
     @Override
     public Carta truco(Carta carta) {
-        return null;
+        return this;
+    }
+
+    public Carta truco(AnchoBasto anchoBasto){
+        return anchoBasto;
+    }
+
+    public Carta truco(AnchoEspada anchoEspada){
+        return anchoEspada;
     }
 }
