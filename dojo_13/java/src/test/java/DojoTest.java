@@ -75,19 +75,29 @@ public class DojoTest {
 
         Assert.assertEquals (anEspada, sietedeEspadas.truco(anEspada) );
     }
-/**
+
 	@Test
-   // public void test_envido_triada_jugador_uno_veintiocho_pierde_contra_triada_jugador_dos_treintaidos(){
-	    Mano manoJugadorUno = new Mano(new AnchoEspada(),new TresOro(), new CincoOro());
-	    Mano manoJugadorDos = new Mano(new AnchoBasto(), new SieteEspada(), new CincoEspadas());
+    public void test_envido_triada_jugador_uno_veintiocho_pierde_contra_triada_jugador_dos_treintaidos(){
+        Mano manoJugadorUno = new Mano(new TresOro(), new CincoOro(), new AnchoEspada());
+        Mano manoJugadorDos = new Mano(new SieteEspada(), new CincoEspadas(), new AnchoBasto());
 
-	    Envido actual = manoJugadorUno.compiteEnvido(manoJugadorDos);
-	    Envido envidoResultante = new Envido(new );
+	    Mano ganador = manoJugadorUno.envido(manoJugadorDos);
+	    Mano esperada = new Mano(new SieteEspada(), new CincoEspadas(), new AnchoBasto());
 
-	    Assert.assertEquals( manoJugadorDos , manoJugadorUno.envido(manoJugadorDos));
-
-
+	    Assert.assertEquals( esperada , ganador);
     }
-**/
+
+
+
+    @Test
+    public void test_envido_triada_jugador_uno_treintaitres_gana_contra_triada_jugador_dos_treintaidos(){
+        Mano manoJugadorUno = new Mano(new AnchoEspada(),new SieteOro(), new SeisOro());
+        Mano manoJugadorDos = new Mano(new AnchoBasto(), new SieteEspada(), new CincoEspadas());
+
+        Mano ganador = manoJugadorUno.envido(manoJugadorDos);
+        Mano esperada = new Mano(new AnchoEspada(),new SieteOro(), new SeisOro());
+
+        Assert.assertEquals( esperada , ganador);
+    }
 
 }
