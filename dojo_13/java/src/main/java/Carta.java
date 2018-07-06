@@ -1,6 +1,3 @@
-import com.sun.istack.internal.tools.ParallelWorldClassLoader;
-import sun.font.CoreMetrics;
-
 public interface Carta {
     Carta truco(Carta carta);
 
@@ -9,4 +6,6 @@ public interface Carta {
     String palo();
 
     Integer numero();
+
+    Integer numeroEnvido();
 }

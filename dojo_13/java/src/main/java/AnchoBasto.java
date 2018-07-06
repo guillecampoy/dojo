@@ -15,6 +15,11 @@ public class AnchoBasto implements Carta{
     }
 
     @Override
+    public Integer numeroEnvido() {
+        return 1;
+    }
+
+    @Override
     public Carta truco(Carta carta) {
         return null;
     }
@@ -26,4 +31,5 @@ public class AnchoBasto implements Carta{
     public Carta truco(AnchoEspada anchoEspada) {
         return anchoEspada;
     }
+
 }

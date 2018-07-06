@@ -14,4 +14,9 @@ public class TresOro implements Carta {
         return 3;
     }
 
+    @Override
+    public Integer numeroEnvido() {
+        return 3;
+    }
+
 }

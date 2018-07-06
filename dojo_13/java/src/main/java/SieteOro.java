@@ -15,6 +15,11 @@ public class SieteOro implements Carta{
     }
 
     @Override
+    public Integer numeroEnvido() {
+        return 7;
+    }
+
+    @Override
     public Carta truco(Carta carta) {
         return this;
     }

@@ -15,6 +15,11 @@ public class CuatroCopas implements Carta{
     }
 
     @Override
+    public Integer numeroEnvido() {
+        return 4;
+    }
+
+    @Override
     public Carta truco(Carta carta) {
         return this;
     }

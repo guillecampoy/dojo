@@ -42,7 +42,13 @@ public class EnvidoTest {
         assertEquals(valor3, valor4);
     }
 
+    @Test
+    public void envido_valor_veinte_triada_dos_negras_mismo_palo_oro_uno_basto(){
+        Envido envido1 = new Envido(new OnceCopas(), new DoceCopas(), new AnchoBasto());
+        Integer valor1 = envido1.valor();
 
+        assertEquals(new Integer(20) ,valor1);
+    }
 
 }
 

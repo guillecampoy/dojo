@@ -9,10 +9,10 @@ public class Envido {
     }
 
     public Integer valor() {
-        Integer maximo = 1;
+        Integer maximo = this.valorTomandoCartaEnvido(0);
 
-        for(int i = 0; i < this.cartas.size(); ++i) {
-            Integer valor = this.valorTomandoCarta(i);
+        for(int i = 0; i < this.cartas.size()-1; ++i) {
+            Integer valor = this.valorTomandoCartaEnvido(i);
 
             if ( valor >= maximo) {
                 maximo = valor;
@@ -23,19 +23,19 @@ public class Envido {
 
     }
 
-    private Integer valorTomandoCarta(int i) {
+    private Integer valorTomandoCartaEnvido(int i) {
         Carta carta = this.cartas.get(i);
-        Integer resultado = carta.numero();
+        Integer resultado = carta.numeroEnvido();
 
         ArrayList<Carta> restantes = (ArrayList<Carta>) this.cartas.clone();
         restantes.remove(i);
 
 
         if( carta.palo().equals(restantes.get(0).palo() ) ){
-            resultado = resultado + restantes.get(0).numero();
+            resultado = resultado + restantes.get(0).numeroEnvido();
         }
         if( carta.palo().equals(restantes.get(1).palo()) ){
-            resultado = resultado + restantes.get(1).numero();
+            resultado = resultado + restantes.get(1).numeroEnvido();
         }
 
         return resultado;

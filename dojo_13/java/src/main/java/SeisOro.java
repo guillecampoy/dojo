@@ -18,4 +18,9 @@ public class SeisOro implements Carta {
     public Integer numero(){
         return 6;
     }
+
+    @Override
+    public Integer numeroEnvido() {
+        return 6;
+    }
 }

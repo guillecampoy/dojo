@@ -18,4 +18,9 @@ public class AnchoEspada implements Carta{
     public Integer numero() {
         return 1;
     }
+
+    @Override
+    public Integer numeroEnvido() {
+        return 1;
+    }
 }
