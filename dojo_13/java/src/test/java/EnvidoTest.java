@@ -50,5 +50,37 @@ public class EnvidoTest {
         assertEquals(new Integer(20) ,valor1);
     }
 
+    @Test
+    public void envido_valor_uno_triada_anchoBasto_anchoEspada_AnchoCopa(){
+        Envido envido1 = new Envido(new AnchoBasto(), new AnchoEspada(), new AnchoCopa());
+        Integer valor1 = envido1.valor();
+
+        assertEquals(new Integer(1) ,valor1);
+    }
+
+    @Test
+    public void envido_valor_0_triada_OnceCopas_DoceOro_DiesBasto(){
+        Envido envido1 = new Envido(new OnceCopas(), new DoceOro(), new DiezBasto());
+        Integer valor1 = envido1.valor();
+
+        assertEquals(new Integer(0) ,valor1);
+    }
+
+    @Test
+    public void envido_valor_treintaidos_triada_seteEspada_anchoEspada_CincoEspada(){
+        Envido envido1 = new Envido(new AnchoEspada(), new SieteEspada(), new CincoEspadas());
+        Integer valor1 = envido1.valor();
+
+        assertEquals(new Integer(32) ,valor1);
+    }
+
+    @Test
+    public void envido_valor_treintaidos_bis_triada_seteEspada_anchoEspada_CincoEspada(){
+        Envido envido1 = new Envido(new SieteEspada(), new CincoEspadas(), new AnchoEspada());
+        Integer valor1 = envido1.valor();
+
+        assertEquals(new Integer(32) ,valor1);
+    }
+
 }
 

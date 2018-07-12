@@ -87,8 +87,6 @@ public class DojoTest {
 	    Assert.assertEquals( esperada , ganador);
     }
 
-
-
     @Test
     public void test_envido_triada_jugador_uno_treintaitres_gana_contra_triada_jugador_dos_treintaidos(){
         Mano manoJugadorUno = new Mano(new AnchoEspada(),new SieteOro(), new SeisOro());

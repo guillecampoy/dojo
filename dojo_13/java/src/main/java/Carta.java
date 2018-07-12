@@ -8,4 +8,6 @@ public interface Carta {
     Integer numero();
 
     Integer numeroEnvido();
+
+    
 }
